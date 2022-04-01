@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* 
+Table of Contents
+======================
+➡ variables
+➡ Global Styles
+➡ Wrapper
+➡ Nav Bar
+➡ Hero
+➡ About
+➡ Projects
+➡ Contact
+➡ Fotter
+➡ Media Query
+*/
+
+$prmy-color: #02c39a;
+$scry-color1: #ffffff;
+$scry-color2: #000000;
+
+$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+
+$fontSize1: 2rem;
+$fontSize2: 1.5rem;
+$fontSize3: 1.2rem;
+$fontSize4: 1rem;
+$fontSize5: 0.8rem;
+$borderPrmy: .2rem solid $prmy-color;
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $scry-color1;
+  font-family: 'Roboto', sans-serif;
+  color: $prmy-color;
+  margin: 0;
+  padding: 0;
+}
+
+//wrapper section starts
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+//wrapper section ends
+
+
+//header section starts
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .brand {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    // border: 3px solid red;
+    width: 100%;
+    padding-left: 140px;
+
+    img {
+      width: 4rem;
+      height: auto;
+    }
+  }
+
+  .nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 100px;
+    
+    ul {
+      display: flex;
+      gap: 0px;
+  
+      li {
+        list-style: none;
+        cursor: pointer;
+
+        &:hover {
+          color: $scry-color2;
+          // border-bottom: $borderPrmy;
+        }
+
+        a {
+          text-decoration: none;
+          font-size: 1.5rem;
+          font-weight: 700;
+          padding: 1rem;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+//header section ends
+
+
+// Hero Section starts
+.hero {
+  background-color: $scry-color1;
+  // background: url('../assets/bg-wave.svg') no-repeat center top;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 2rem;
+}
+// Hero Section ends
+
+//About Section starts
+.about {
+  background-color: $prmy-color;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 2rem;
+}
+//About Section ends
+
+
+//Projects Section starts
+.projects {
+  background-color: $scry-color1;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 2rem;
+}
+//Projects Section ends
+
+//Contact Section starts
+.contact {
+  background-color: $prmy-color;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 2rem;
+}
+//Contact Section ends
+
+//Footer Section starts
+.footer {
+  background-color: $scry-color2;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  height: 10vh;
+}
+//Footer Section ends
