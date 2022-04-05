@@ -9,10 +9,11 @@
   <meta name="author" content="Abdifatah Annaati">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_16x16.png">
-  <title> 
+  <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
 </head>
+
 <body>
   <!--========== Wrapper ==========/-->
   <main class="wrapper">
@@ -23,10 +24,10 @@
       </div>
       <nav class="nav">
         <ul>
-          <li> <a href="#"></a>Home</li>
-          <li> <a href="#a"></a>about</li>
-          <li> <a href="#"></a>Projects</li>
-          <li> <a href="#"></a>Contact</li>
+          <li> <a href="#home"></a>Home</li>
+          <li> <a href="#about"></a>about</li>
+          <li> <a href="#projects"></a>Projects</li>
+          <li> <a href="#contact"></a>Contact</li>
         </ul>
         <div class="bb-hover"></div>
       </nav>
@@ -34,24 +35,30 @@
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
+        <!-- <ul class="mobile-menu">
+          <li> <a href="#home"></a>Home</li>
+          <li> <a href="#about"></a>about</li>
+          <li> <a href="#projects"></a>Projects</li>
+          <li> <a href="#contact"></a>Contact</li>
+        </ul> -->
       </div>
     </header>
     <!--========== Header Section ==========/-->
 
     <!--========== Hero Section ==========-->
-    <section class="hero">Hero Section</section>
+    <section id="home" class="hero">Hero Section</section>
     <!--========== Hero Section Section ==========/-->
-    
+
     <!--========== About Me Section ==========-->
-    <section class="about">About Section</section>
+    <section id="about" class="about">About Section</section>
     <!--========== About Me Section ==========/-->
 
     <!--========== Projects Section ==========-->
-    <section class="projects">Projects Section</section>
+    <section id="projects" class="projects">Projects Section</section>
     <!--========== Projects Section ==========/-->
 
     <!--========== Contact Section ==========-->
-    <section class="contact">Contact Section</section>
+    <section id="#contact" class="contact">Contact Section</section>
     <!--========== Contact Section ==========/-->
 
     <!--========== Footer Section ==========-->
@@ -60,4 +67,5 @@
   </main>
   <!--========== Wrapper ==========/-->
 </body>
+
 </html>

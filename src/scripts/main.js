@@ -8,3 +8,8 @@ window.addEventListener('scroll', function() {
   }
 }); 
 
+//Toogle Mobile Menu
+window.addEventListener('click', function(e) {
+  var mm = document.getElementById("mobile-menu")
+  mm.classList.toggle('open');
+});

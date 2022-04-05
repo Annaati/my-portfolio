@@ -94,6 +94,7 @@ header {
         cursor: pointer;
         color: $scry-color1;
         font-size: $fontSize4;
+        margin: 0 1rem;
 
         &:hover {
           color: $scry-color2;
@@ -110,6 +111,7 @@ header {
           margin: 0 16px;
           letter-spacing: 0.4rem;
           transition: all 0.4s ease-in-out;
+          gap: 8rem;
         }
       }
     }
@@ -180,51 +182,106 @@ header {
 }
 //Footer Section ends
 
+// Mobile menu
+#mobile-menu {
+  display: none;
+  margin: auto 0;
+  cursor: pointer;
+
+  div {
+    width: 2rem;
+    height: .2rem;
+    background-color: $scry-color1;
+    margin: 5px;
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-.4rem, .4rem);
+  transform: rotate(-45deg) translate(-.4rem, .4rem);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-.4rem, -.5rem);
+  transform: rotate(45deg) translate(-.4rem, -.5rem);
+}
+
+//Media Query starts
+
+//Tablets
 @media only screen and (max-width: 768px) {
   .wrapper {
+    padding: 0;
+    header {
+      .brand {
+        margin-left: 1.4rem;
+      }
+      .nav {
+        ul {
+          li {
+            gap: 1rem;
+            a {
+              gap: 2rem;
+            }
+          }
+          }
+        }
+      }
+    }
+  }
+ 
+
+//Mobile
+@media only screen and (max-width: 600px) {
+
+  .wrapper {
     padding: 0 0.16rem;
+
+    header {
+      background: rgba(0, 0, 0, 0.4);
+
+      .brand {
+        margin-left: 1.4rem;
+      }
+
+      .nav {
+        gap: 0rem;
+        display: none;
+
+        ul {
+          display: flex;
+          gap: 1rem;
+          flex-direction: column;
+          margin: 1rem 10rem 1rem 0;
+
+          li {
+            font-size: $fontSize3;
+            margin: 0;
+            text-align: left;
+          }
+
+        }
+
+      }
+
+      #mobile-menu  .open ~ nav {
+        display: block;
+      } 
+      //mobile menu
+      #mobile-menu  {
+        display: block;
+      }
+
+    }
+
+    
+
   }
 
-  header {
-    margin: auto 0;
-
-    nav {
-      display: none;
-      // height: fit-content;
-    }
-
-    #mobile-menu {
-      margin: auto 0;
-      cursor: pointer;
-      padding-right: 1%;
-      display: flex;
-      gap: 0.1rem;
-    }
-
-    #mobile-menu > div {
-      position: relative;
-      width: 0.8rem;
-      height: 3rem;
-      background-color: red;
-      margin: 0.1rem 0;
-      transition: 0.4s;
-    }
-  }
-
-  // .hero {
-  //   height: 100vh;
-  //   margin-bottom: 0;
-  // }
-
-  // .about {
-  // }
-
-  // .projects {
-  // }
-
-  // .contact {
-  // }
-
-  // .footer {
-  // }
 }
+//Media Query ends
