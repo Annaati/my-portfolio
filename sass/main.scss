@@ -11,7 +11,8 @@ Table of Contents
 ➡ About
 ➡ Projects
 ➡ Contact
-➡ Fotter
+➡ Footer
+➡ Mobile Menu - Humburger
 ➡ Media Query
 */
 
@@ -109,6 +110,7 @@ header {
         color: $scry-color1;
         font-size: $fontSize4;
         margin: 0 1rem;
+        padding: 0 1rem;
 
         &:hover {
           color: $scry-color2;
@@ -231,7 +233,8 @@ header {
 }
 //Footer Section ends
 
-// Mobile menu
+
+// Mobile menu - Humburger starts
 .mobileMenu {
   display: none;
   margin: 0 auto;
@@ -259,29 +262,31 @@ header {
   -webkit-transform: rotate(45deg) translate(-0.4rem, -0.5rem);
   transform: rotate(45deg) translate(-0.4rem, -0.5rem);
 }
+// Mobile menu - Humburger  ends
+
 
 //Media Query starts
 
 //Tablets
-@media only screen and (max-width: 768px) {
-  .wrapper {
-    padding: 0;
-    header {
-      .brand {
-        margin-left: 1.4rem;
-      }
-      ul {
-        gap: 0.4rem;
-        a {
-          gap: 1rem;
-        }
-      }
-    }
-  }
-}
+// @media only screen and (max-width: 768px) {
+//   .wrapper {
+//     padding: 0;
+//     header {
+//       .brand {
+//         margin-left: 1.4rem;
+//       }
+//       ul {
+//         gap: 0.4rem;
+//         a {
+//           gap: 1rem;
+//         }
+//       }
+//     }
+//   }
+// }
 
 //Mobile
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   a {
     color: $scry-color2;
   }
@@ -325,5 +330,5 @@ header {
       }
     }
   } //wrapper
-}
+} //mobile
 //Media Query ends
