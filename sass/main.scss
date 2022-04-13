@@ -214,12 +214,52 @@ header {
 
 //Contact Section starts
 .contact {
-  background-color: $prmy-color;
+  // background-color: $prmy-color;
   display: flex;
   justify-self: center;
   align-items: center;
   height: 100vh;
   // margin: 0 2rem;
+
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 3rem;
+
+    .contact-details {
+      // border: solid 2px red;
+      width: 40%;
+      -webkit-box-shadow: 0px 2px 12px 5px rgba(0,0,0,0.4); 
+      box-shadow: 0px 2px 12px 5px rgba(0,0,0,0.4);
+    }
+
+    .contact-form {
+      border: solid 2px blue;
+      width: 50%;
+    }
+
+    .social {
+      border: solid 2px yellow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 10%;
+      
+      ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        li {
+          margin: 0 1rem;
+          font-size: $fontSize3;
+          color: $scry-color2;
+        }
+      }
+    }
+  }
 }
 //Contact Section ends
 
