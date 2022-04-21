@@ -31,15 +31,15 @@ $fontSize5: 0.8rem;
 //Gobal Styles starts
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  
 }
 
 body {
-  background-color: $scry-color1;
+  padding: 0;
+  margin: 0;
   font-family: 'Roboto', sans-serif;
   color: $prmy-color;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 a {
@@ -51,13 +51,16 @@ li {
 }
 
 section {
-  padding: 1rem;
+  // padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
 }
 
+i {
+  color: $scry-color1;
+  font-size: $fontSize2;
+}
 //global styles ends
 
 //wrapper section starts
@@ -65,7 +68,6 @@ section {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0 0.4rem;
 }
 //wrapper section ends
 
@@ -148,42 +150,77 @@ header {
 
 // Hero Section starts
 .hero {
-  position: relative;
   width: 100%;
   height: 100vh;
   background: url('../assets/svg/simple_shiny.svg') no-repeat center center;
   background-size: cover;
 
-  .hero-container {
+  &_container {
+    border: solid 2px red;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100%;
-    padding-top: 3rem;
-    border: solid 2px blue;
+    height: 80%;
+    color: $scry-color2;
 
-    .hero-left {
-      border: solid 2px yellow;
-      color: $scry-color2;
-
-      ul {
+    &_left {
+      border: solid 2px blue;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      
+      &_contacts {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: left;
         align-items: center;
-        li {
-          font-size: 1.4rem;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: start;
+          left: 0;
+          padding: 2rem 0;
+
+          li {
+            padding: .5rem .2rem;
+
+            &:hover {
+              transform: scale(1.4);
+              transition: 0.4s;
+            }
+            i {
+              &:hover {
+                color: $scry-color2;
+              }
+            }
+          }
+          
+        }
+
+      }
+
+      &_intro {
+        border: solid 2px green;
+        width: 80%;
+
+        &_occupation {
+          display: flex;
+          padding: 0 1rem;
         }
       }
     }
 
-    .hero-righ {
-      width: 40%;
-      height: auto;
-      border: solid 2px red;
-
-     
-
+    &_righ {
+      border: solid 2px yellow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
       img {
         z-index: -1000;
       }
@@ -194,17 +231,72 @@ header {
 
 //About Section starts
 .about {
-  background-color: $prmy-color;
+  background-image: linear-gradient(to right top, #000000, #3c261f, #635029, #678848, #02c39a);
+  border: solid 2px red;
   display: flex;
   justify-self: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
+
+  &_container {
+    border: solid 2px blue;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_content {
+      border: solid 2px green;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        border: solid 2px yellow;
+        font-size: $fontSize1;
+        font-weight: 900;
+        color: $scry-color2;
+        margin: 0;
+        padding: 0;
+      }
+
+      p {
+        border: solid 2px red;
+        height: 70%;
+        font-size: $fontSize4;
+        font-weight: 700;
+        color: $scry-color2;
+        margin: 0;
+        padding:  1rem 1.6rem 0;
+        text-align: justify;
+        line-height: 1.2;
+        overflow-wrap: break-word;
+      }
+
+    }
+
+    &_img {
+      border: solid 2px yellow;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+  }
 }
 //About Section ends
 
 //Projects Section starts
 .projects {
-  background-color: $scry-color1;
   display: flex;
   justify-self: center;
   align-items: center;
@@ -214,7 +306,7 @@ header {
 
 //Contact Section starts
 .contact {
-  // background-color: $prmy-color;
+  border: solid 2px blue;
   display: flex;
   justify-self: center;
   align-items: center;
